@@ -32,3 +32,5 @@ fields:
   label: layout
   hidden: true
   default: post
+pages:
+- food.md
