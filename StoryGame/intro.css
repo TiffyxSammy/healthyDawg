@@ -1,0 +1,56 @@
+* {
+    background-color: black;
+}
+
+.tester {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    transform: translate(-50%, -50%)
+
+}
+
+#welcome #welcome-message {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#welcome #start {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#welcome #start .text {
+    color: white;
+    display: block;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+#welcome #start .button {
+    background-color: red;
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    padding: 6px 14px 6px;
+}
+
+.full-screen {
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
