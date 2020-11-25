@@ -92,7 +92,7 @@ const fps = 60;
 
     config.data = ()=>{
         return {
-            fuel: 15,
+            fuel: 40,
             score: 0,
             shoot: 0,
             time : 0,
