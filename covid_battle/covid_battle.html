@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>COVID-19 Battle</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#ugacovid" class="w3-bar-item w3-button w3-padding-large w3-hide-small">UGA COVID-19</a>
+      <a href="#stayinghealthy" class="w3-bar-item w3-button w3-padding-large w3-hide-small">How to stay Healthy</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COVID-19</a>
+      <a href="https://tiffyxsammy.github.io/healthyDawgPhotos/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Pandemic Life</a>
+      <a href="socialDistance.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Social Distancing Activities</a>
+      <a href="covid_tracker.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COVID-19 Tracker</a>
+      <a href="creators.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Creators</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">Games<i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="StoryGame/intro.html" class="w3-bar-item w3-button">Story Game</a>
+          <a href="Covid%20Run/covidRun.html" class="w3-bar-item w3-button">Covid Run</a>
+          <a href="bulldawg_test.html" class="w3-bar-item w3-button">Bulldawg Test</a>
+          <a href="covidQuiz.html" class="w3-bar-item w3-button">COVID-19 Quiz</a>
+          <a href="covid_battle.html" class="w3-bar-item w3-button">COVID-19 Battle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Game -->
+    <div  style="margin-top:130px;" id="app">
+        <div id="logo">
+            <img src="./img/logo-01.png" alt="logo">
+        </div>
+        <div id="container" class="absolute">
+            <div id="start" class="column">
+                <p class="message pre">
+                    1. Press  `W`、`A`、`S`、`D` control spacecraft，Press `Space` fire.
+                    2. The initial fuel value is 15. Decrement by 1 point per second. When the fuel value is 0, the game is over.
+                    3. The fuel bottle that touches it can be increased by 15 points and the maximum value is 30 points.
+                    4. Hit the enemy spacecraft to increase by 5 points. The planet needs to hit twice, increasing by 10 points. Hit the friend to deduct 10 points.
+                    5. Collision enemy loses 15 points of fuel, and the friendly party deducts 10 points.
+                    6. Game allows negative points.
+                    7. Press `P` Pause game. Press `M` mute。
+                </p>
+                <button id="start-btn" class="btn">
+                    <p>Start</p>
+                    <p>Loading...</p>
+                </button>
+            </div>
+            <div id="play" class="absolute">
+                <canvas id="canvas" class="absolute"></canvas>
+                <div class="content absolute">
+                    <div class="header">
+                        <ul class="info">
+                            <li>
+                                <img src="./img/time3.png" alt="time">
+                                <span id="time">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/fuel2.png" alt="fuel">
+                                <span id="fuel">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/score.png" alt="score">
+                                <span id="score">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/playerBullet.png" alt="score">
+                                <span id="shoot">00</span>
+                            </li>
+
+                        </ul>
+                        <ul class="option">
+                            <li id="game-font-size-add">
+                                <img class="pause" src="./img/a+.png" alt="time">
+                            </li>
+                            <li id="game-font-size-reduce">
+                                <img class="pause" src="./img/a-.png" alt="time">
+                            </li>
+                            <li id="game-mute-btn">
+                                <img class="pause" src="./img/mute.png" alt="time">
+                                <img class="pause" src="./img/speaker.png" alt="time">
+                            </li>
+                            <li id="game-pause-btn">
+                                <img class="pause" src="./img/play.png" alt="time">
+                                <img class="pause" src="./img/pause.png" alt="time">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="over" class="column absolute">
+                <div class="game-data">
+                    <p class="message">
+                        <span>
+                            <img src="./img/time3.png" alt="time">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="time">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/score.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="score">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/playerBullet.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="shoot">00</span>
+                    </p>
+                </div>
+                <input type="text" id="name" placeholder="Enter Name" />
+                <button id="submit-btn" class="btn" disabled>
+                    Play Again
+                </button>
+            </div>
+            <div id="rank" class="column absolute">
+                <table class="scroll">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button id="restart-btn" class="btn">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/config/config.js"></script>
+    <script src="js/utils/utils.js"></script>
+    <script src="js/utils/res.js"></script>
+    <script src="js/class/scene.js"></script>
+    <script src="js/class/cooldown.js"></script>
+    <script src="js/class/element.js"></script>
+    <script src="js/class/animation.js"></script>
+    <script src="js/class/plane.js"></script>
+    <script src="js/class/bullet.js"></script>
+    <script src="js/class/player.js"></script>
+    <script src="js/class/enemy.js"></script>
+    <script src="js/class/meteorite.js"></script>
+    <script src="js/class/friend.js"></script>
+    <script src="js/class/star.js"></script>
+    <script src="js/class/fuel.js"></script>
+    <script src="js/scenes/start.js"></script>
+    <script src="js/scenes/play.js"></script>
+    <script src="js/scenes/over.js"></script>
+    <script src="js/scenes/rank.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
