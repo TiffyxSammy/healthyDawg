@@ -80,8 +80,8 @@ const fps = 60;
 
     config.fuelConfig = {
         fuelLoseSpeed: -1,
-        fuelRaiseSpeed: 15,
-        fuelMax: 30,
+        fuelRaiseSpeed: 30,
+        fuelMax: 100,
         beingHit : -15,
     }
     config.scoreConfig = {
@@ -92,7 +92,7 @@ const fps = 60;
 
     config.data = ()=>{
         return {
-            fuel: 40,
+            fuel: 90,
             score: 0,
             shoot: 0,
             time : 0,
