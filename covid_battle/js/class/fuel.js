@@ -7,7 +7,7 @@ class Fuel extends Plane{
         this.rotateState = true;
         this.rotateSpeed = 0.5;
         this.textRise = 20;
-        this.text = "+15";
+        this.text = "+30";
     }
 
     move() {
