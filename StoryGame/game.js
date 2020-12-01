@@ -257,7 +257,7 @@ const textNodes =
         },
         {
           text: 'Go back to sleep',
-          nextText: 3
+          nextText: 82
         }
       ]
     },
@@ -624,11 +624,11 @@ const textNodes =
       options: [
         {
           text: 'Dine in',
-          nextText: 35
+          nextText: 43
         },
         {
           text: 'Order To-Go',
-          nextText: 35
+          nextText: 44
         }
       ]
     },
@@ -796,12 +796,8 @@ const textNodes =
       text: 'You wake up from your nap and realized that an hour has passed by and you have your class starting soon.',
       options: [
         {
-          text: 'Get ready to go to class',
-          nextText: 52
-        },
-        {
-          text: 'Skip class',
-          nextText: 52
+          text: 'Get ready for the next class',
+          nextText: 10
         }
       ]
     },
@@ -810,12 +806,12 @@ const textNodes =
       text: 'You check the current statistics on the Coronavirus. The USA is still ranked number 1 in the world for COVID cases with Georgia being number 6 in the country.',
       options: [
         {
-          text: 'Get ready to go to class',
-          nextText: 52
+          text: 'Take a nap',
+          nextText: 22
         },
         {
-          text: 'Skip class',
-          nextText: 52
+          text: 'Get ready for the next class',
+          nextText: 10
         }
       ]
     },
