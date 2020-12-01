@@ -1391,7 +1391,7 @@ const textNodes =
       text: 'You tell your friend that they are probably overthinking it and should not bother taking DAWG CHECK. This is not a good choice as it is always better to be extra safe than to risk it because it is not only their health at risk but also the health of those around them.',
       options: [
         {
-          text: 'Tell them to take DAWG CHECL',
+          text: 'Tell them to take DAWG CHECK',
           nextText: 92
         }
       ]
