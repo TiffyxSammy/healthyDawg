@@ -157,7 +157,7 @@ const textNodes =
           nextText: 9
         },
         {
-          text: 'Find a play to study',
+          text: 'Find a place to study',
           nextText: 59
         },
         {
@@ -204,7 +204,7 @@ const textNodes =
     },
     { // Tate
       id: 11,
-      text: 'You look around Tate for a place to study and managed to find an empty table. You lay dowwn your stuff and get ready to grind.',
+      text: 'You look around Tate for a place to study and managed to find an empty table. You put down your stuff and get ready to grind.',
       options: [
         {
           text: 'Ride the bus',
@@ -410,7 +410,7 @@ const textNodes =
           nextText: 22
         },
         {
-          text: 'Check COVID statistics',
+          text: 'Check COVID-19 statistics',
           nextText: 55
         }
       ]
@@ -508,7 +508,7 @@ const textNodes =
           nextText: 89
         },
         {
-          text: 'Watch netflix',
+          text: 'Watch Netflix',
           nextText: 89
         }
       ]
@@ -558,7 +558,7 @@ const textNodes =
     },
     { // SKIPPING DAWG CHECK DAY 3
       id: 34,
-      text: 'You decided to skip doing dawgcheck and you start on the next task of your day but noticed something urgent on your phone',
+      text: 'You decided to skip doing DawgCheck and you start on the next task of your day but noticed something urgent on your phone',
       options: [
         {
           text: 'Check your texts',
@@ -610,7 +610,7 @@ const textNodes =
     },
     { // Surveillance Testing at Legion Field
       id: 40,
-      text: 'You arrive at Legion Field for your asymptomatic COVID testing. You check in and walk to one of the desks and wait til it is your turn for testing.',
+      text: 'You arrive at Legion Field for your asymptomatic COVID-19 testing. You check in and walk to one of the desks and wait until it is your turn for testing.',
       options: [
         {
           text: 'Finish testing and leave',
@@ -782,7 +782,7 @@ const textNodes =
       id: 53,
       text: 'Test Results:',
       text: 'Test Results:',
-      text: 'COVID: Positive',
+      text: 'COVID-19: Positive',
       text: 'Based on your test results, it is advised that you self quarantine at home for two weeks. Please continue to monitor your personal situation, take the "Check for Symptoms" tool daily, and report any new symptoms.',
       options: [
         {
@@ -803,7 +803,7 @@ const textNodes =
     },
     { // CHECKING COVID STATISTICS
       id: 55,
-      text: 'You check the current statistics on the Coronavirus. The USA is still ranked number 1 in the world for COVID cases with Georgia being number 6 in the country.',
+      text: 'You check the current statistics on the Coronavirus. The USA is still ranked number 1 in the world for COVID-19 cases with Georgia being number 6 in the country.',
       options: [
         {
           text: 'Take a nap',
@@ -1388,10 +1388,10 @@ const textNodes =
     },
     { // advse friend
       id: 93,
-      text: 'You tell your friend that they are probably overthinking it and should not bother taking DAWG CHECK. This is not a good choice as it is always better to be extra safe than to risk it because it is not only their health at risk but also the health of those around them.',
+      text: 'You tell your friend that they are probably overthinking it and should not bother checking DAWG CHECK. This is not a good choice as it is always better to be extra safe than to risk it because it is not only their health at risk but also the health of those around them.',
       options: [
         {
-          text: 'Tell them to take DAWG CHECK',
+          text: 'Tell them to check DAWG CHECK',
           nextText: 92
         }
       ]
