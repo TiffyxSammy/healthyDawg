@@ -408,6 +408,34 @@ const textNodes =
         }
       ]
     },
+    { // DAWG CHECK DAY 2
+      id: 24,
+      text: 'You go through DawgCheck and the result says that you are cleared to go to campus. However, you decide that you want to take a day to yourself.',
+      options: [
+        {
+          text: 'Go to iron horse',
+          nextText: 25
+        },
+        {
+          text: 'Have a zoom movie day',
+          nextText: 95
+        }
+      ]
+    },
+    { // Check social media (herty field)
+      id: 25,
+      text: 'You send a text to your friends and ask them if they want to go hang out 6 feet apart at iron horse.',
+      options: [
+        {
+          text: 'Prepare to head out',
+          nextText: 22
+        },
+        {
+          text: 'Have a zoom movie day instead',
+          nextText: 95
+        }
+      ]
+    },
     { // DT
       id: 26,
       text: 'Your friend went downtown yesterday and now they are showing symptoms of having COVID, what do you do?',
@@ -499,7 +527,7 @@ const textNodes =
       options: [
         {
           text: 'Do DawgCheck',
-          nextText: 12
+          nextText: 24
         },
         {
           text: 'Skip DawgCheck',
@@ -570,6 +598,42 @@ const textNodes =
         {
           text: 'Stay up and watch Netflix',
           nextText: 3
+        }
+      ]
+    },
+    { // MLC STUDY ROOM (LEAVE)
+      id: 38,
+      text: 'You leave MLC, what do you want to do now?',
+      options: [
+        {
+          text: 'Go to Tate Student Center',
+          nextText: 8
+        },
+        {
+          text: 'Go to class',
+          nextText: 10
+        },
+        {
+          text: 'Go home',
+          nextText: 32
+        }
+      ]
+    },
+    { // TATE STUDENT CENTER (STUDY)
+      id: 39,
+      text: 'You look for a place to study around Tate and see that there are people scattered around the floor along the sides of the wall studying. You manage to find an empty table and lay down your stuff and get ready to grind.',
+      options: [
+        {
+          text: 'Go to Tate Student Center',
+          nextText: 8
+        },
+        {
+          text: 'Go to class',
+          nextText: 10
+        },
+        {
+          text: 'Go home',
+          nextText: 32
         }
       ]
     },
@@ -669,19 +733,19 @@ const textNodes =
       options: [
         {
           text: 'Nachos',
-          nextText: 49
+          nextText: 86
         },
         {
           text: 'Tacos',
-          nextText: 49
+          nextText: 86
         },
         {
           text: 'Quesidilla',
-          nextText: 49
+          nextText: 86
         },
         {
           text: 'Sandwich',
-          nextText: 49
+          nextText: 86
         }
       ]
     },
@@ -837,42 +901,6 @@ const textNodes =
         {
           text: 'Watch Netflix',
           nextText: 52
-        }
-      ]
-    },
-    { // MLC STUDY ROOM (LEAVE)
-      id: 38,
-      text: 'You leave MLC, what do you want to do now?',
-      options: [
-        {
-          text: 'Go to Tate Student Center',
-          nextText: 8
-        },
-        {
-          text: 'Go to class',
-          nextText: 10
-        },
-        {
-          text: 'Go home',
-          nextText: 33
-        }
-      ]
-    },
-    { // TATE STUDENT CENTER (STUDY)
-      id: 39,
-      text: 'You look for a place to study around Tate and see that there are people scattered around the floor along the sides of the wall studying. You manage to find an empty table and lay down your stuff and get ready to grind.',
-      options: [
-        {
-          text: 'Go to Tate Student Center',
-          nextText: 8
-        },
-        {
-          text: 'Go to class',
-          nextText: 10
-        },
-        {
-          text: 'Go home',
-          nextText: 33
         }
       ]
     },
@@ -1370,8 +1398,107 @@ const textNodes =
           nextText: 92
         }
       ]
+    },
+    { // Zoom movie day
+      id: 95,
+      text: 'You send a text to your friends and ask them if they want to have a zoom movie day',
+      options: [
+        {
+          text: 'Frozen',
+          nextText: 96
+        },
+        {
+          text: 'Moana',
+          nextText: 97
+        },
+        {
+          text: 'Shrek',
+          nextText: 98
+        },
+        {
+          text: 'Toy Story',
+          nextText: 99
+        }
+      ]
+    },
+    { // Frozen
+      id: 96,
+      text: 'You and your friends choose to watch Frozen',
+      options: [
+        {
+          text: 'Watch the movie',
+          nextText: 101
+        },
+        {
+          text: 'Choose another movie',
+          nextText: 100
+        }
+      ]
+    },
+    { // Moana
+      id: 97,
+      text: 'You and your friends choose to watch Moana',
+      options: [
+        {
+          text: 'Watch the movie',
+          nextText: 101
+        },
+        {
+          text: 'Choose another movie',
+          nextText: 100
+        }
+      ]
+    },
+    { // Shrek
+      id: 98,
+      text: 'You and your friends choose to watch Shrek',
+      options: [
+        {
+          text: 'Watch the movie',
+          nextText: 101
+        },
+        {
+          text: 'Choose another movie',
+          nextText: 100
+        }
+      ]
+    },
+    { // Toy Story
+      id: 99,
+      text: 'You and your friends choose to watch Toy Story',
+      options: [
+        {
+          text: 'Watch the movie',
+          nextText: 101
+        },
+        {
+          text: 'Choose another movie',
+          nextText: 100
+        }
+      ]
+    },
+    { // Choose another movie
+      id: 100,
+      text: 'You decide to choose another movie',
+      options: [
+        {
+          text: 'Frozen',
+          nextText: 96
+        },
+        {
+          text: 'Moana',
+          nextText: 97
+        },
+        {
+          text: 'Shrek',
+          nextText: 98
+        },
+        {
+          text: 'Toy Story',
+          nextText: 99
+        }
+      ]
     }
-
 
 
   ]
