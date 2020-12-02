@@ -900,11 +900,11 @@ const textNodes =
       options: [
         {
           text: 'Study',
-          nextText: 103
+          nextText: 104
         },
         {
           text: 'Watch Netflix',
-          nextText: 52
+          nextText: 108
         }
       ]
     },
@@ -1570,7 +1570,19 @@ const textNodes =
           nextText: 65
         }
       ]
+    },
+    { // DAY 2 SKIP DAWGCHECK DT YES
+      id: 108,
+      text: 'You spend the majority of the day at MLC watching Netflix and decide that it is time to head home.',
+      options: [
+        {
+          text: 'Head home',
+          nextText: 35
+        }
+      ]
     }
+
+
 
 
   ]
