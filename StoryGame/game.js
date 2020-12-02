@@ -242,7 +242,7 @@ const textNodes =
         }
       ]
     },
-    { // SKIPPING DAWG CHECK
+    { // SKIPPING DAWG CHECK (DAY 1)
       id: 13,
       text: 'You decided to skip doing dawgcheck and you start on the next task of your day',
       options: [
@@ -408,45 +408,17 @@ const textNodes =
         }
       ]
     },
-    { // Friend showing symptom
-      id: 24,
-      text: 'Your friend starts showing symptoms of COVID, what do you do?',
-      options: [
-        {
-          text: 'Tell them to take the DAWG Check application to see if they are fine or should quarantine for two weeks',
-          nextText: 92
-        },
-        {
-          text: 'Tell them that they are fine and is probably overthinking it',
-          nextText: 93
-        }
-      ]
-    },
-    { // You are showing symptom
-      id: 25,
-      text: 'You think you have symptoms of COVID, what do you do?',
-      options: [
-        {
-          text: 'Schedule a testing',
-          nextText: -1
-        },
-        {
-          text: 'Ignore it',
-          nextText: -1
-        }
-      ]
-    },
     { // DT
       id: 26,
       text: 'Your friend went downtown yesterday and now they are showing symptoms of having COVID, what do you do?',
       options: [
         {
-          text: 'Tell them to go get tested',
-          nextText: -1
+          text: 'Tell them to do the DawgCheck',
+          nextText: 92
         },
         {
-          text: 'Tell them to be careful but they should be fine',
-          nextText: -1
+          text: 'Tell them they are overthinking it',
+          nextText: 93
         }
       ]
     },
@@ -517,7 +489,7 @@ const textNodes =
         },
         {
           text: 'Ignore it',
-          nextText: -1
+          nextText: 90
         }
       ]
     },
@@ -531,7 +503,7 @@ const textNodes =
         },
         {
           text: 'Skip DawgCheck',
-          nextText: 13
+          nextText: 49
         }
       ]
     },
@@ -541,11 +513,11 @@ const textNodes =
       options: [
         {
           text: 'Do DawgCheck',
-          nextText: 12
+          nextText: 94
         },
         {
           text: 'Skip DawgCheck',
-          nextText: 13
+          nextText: 34
         }
       ]
     },
@@ -719,16 +691,16 @@ const textNodes =
       options: [
         {
           text: 'Enjoy your meal',
-          nextText: 49
+          nextText: 86
         }
       ]
     },
-    { // Lunch with Friends (YES, LEAVE)
+    { // Day 2 Skip Dawg Check
       id: 49,
-      text: 'You leave the restaurant, what do you do',
+      text: 'You decided to skip doing dawgcheck and you start on the next task of your day',
       options: [
         {
-          text: 'Head home',
+          text: 'Do homework',
           nextText: 35
         }
       ]
@@ -1265,7 +1237,7 @@ const textNodes =
         }
       ]
     },
-    { // Wake up from nap
+    { // Wake up from nap 
       id: 83,
       text: 'You wake up from your nap and realize that you slept half the day away.',
       options: [
@@ -1289,7 +1261,7 @@ const textNodes =
         },
         {
           text: 'Ignore and continue doing homework',
-          nextText: 56
+          nextText: 85
         }
       ]
     },
@@ -1307,7 +1279,7 @@ const textNodes =
         }
       ]
     },
-    { // Do hw
+    { // Head home after lunch
       id: 86,
       text: 'You finish getting lunch with your friends and decide it\'s a good time to go home.',
       options: [
@@ -1333,7 +1305,7 @@ const textNodes =
       options: [
         {
           text: 'Go to sleep',
-          nextText: 32
+          nextText: 87
         }
       ]
     },
@@ -1343,7 +1315,7 @@ const textNodes =
       options: [
         {
           text: 'Go to sleep',
-          nextText: 32
+          nextText: 33
         }
       ]
     },
@@ -1382,6 +1354,16 @@ const textNodes =
     { // advse friend
       id: 93,
       text: 'You tell your friend that they are probably overthinking it and should not bother checking DAWG CHECK. This is not a good choice as it is always better to be extra safe than to risk it because it is not only their health at risk but also the health of those around them.',
+      options: [
+        {
+          text: 'Tell them to check DAWG CHECK',
+          nextText: 92
+        }
+      ]
+    },
+    { // DAWG CHECK DAY 3
+      id: 94,
+      text: 'You were about to do DawgCheck but then you noticed something urgent on your phone',
       options: [
         {
           text: 'Tell them to check DAWG CHECK',
