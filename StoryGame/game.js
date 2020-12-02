@@ -172,19 +172,19 @@ const textNodes =
       options: [
         {
           text: 'Caramel Macchiato',
-          nextText: 10
+          nextText: 103
         },
         {
           text: 'Strawberry Acai',
-          nextText: 10
+          nextText: 103
         },
         {
           text: 'Iced Coffee',
-          nextText: 10
+          nextText: 103
         },
         {
           text: 'Latte',
-          nextText: 10
+          nextText: 103
         }
       ]
     },
@@ -413,7 +413,7 @@ const textNodes =
       text: 'You go through DawgCheck and the result says that you are cleared to go to campus. However, you decide that you want to take a day to yourself.',
       options: [
         {
-          text: 'Go to iron horse',
+          text: 'Go to Iron Horse',
           nextText: 25
         },
         {
@@ -424,11 +424,11 @@ const textNodes =
     },
     { // Check social media (herty field)
       id: 25,
-      text: 'You send a text to your friends and ask them if they want to go hang out 6 feet apart at iron horse.',
+      text: 'You send a text to your friends and ask them if they want to go hang out 6 feet apart at Iron Horse.',
       options: [
         {
           text: 'Prepare to head out',
-          nextText: 22
+          nextText: 102
         },
         {
           text: 'Have a zoom movie day instead',
@@ -1496,6 +1496,30 @@ const textNodes =
         {
           text: 'Toy Story',
           nextText: 99
+        }
+      ]
+    },
+    { // Iron Horse arrival
+      id: 102,
+      text: 'You and your friends arrive at iron horse and it is empty. You find a place to settle down.',
+      options: [
+        {
+          text: 'Watch the movie',
+          nextText: 101
+        },
+        {
+          text: 'Choose another movie',
+          nextText: 100
+        }
+      ]
+    },
+    { // Starbucks drink
+      id: 103,
+      text: 'You enjoy your Starbucks drink and then start getting ready for your next class',
+      options: [
+        {
+          text: 'Go to class',
+          nextText: 10
         }
       ]
     }
