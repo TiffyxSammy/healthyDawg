@@ -158,7 +158,7 @@ const textNodes =
         },
         {
           text: 'Find a place to study',
-          nextText: 59
+          nextText: 39
         },
         {
           text: 'Look around',
@@ -419,7 +419,7 @@ const textNodes =
         {
           text: 'Have a zoom movie day',
           nextText: 95
-        }
+        },
       ]
     },
     { // Check social media (herty field)
@@ -506,7 +506,7 @@ const textNodes =
         }
       ]
     },
-    { // Going DT (NO)
+    { // Going DT (YES)
       id: 31,
       text: 'You are feeling unwell and think you might have symptoms of Corona. You think of this because you went downtown with your friends a couple of days ago',
       options: [
@@ -615,7 +615,7 @@ const textNodes =
         },
         {
           text: 'Go home',
-          nextText: 32
+          nextText: 35
         }
       ]
     },
@@ -624,16 +624,12 @@ const textNodes =
       text: 'You look for a place to study around Tate and see that there are people scattered around the floor along the sides of the wall studying. You manage to find an empty table and lay down your stuff and get ready to grind.',
       options: [
         {
-          text: 'Go to Tate Student Center',
-          nextText: 8
-        },
-        {
           text: 'Go to class',
           nextText: 10
         },
         {
           text: 'Go home',
-          nextText: 32
+          nextText: 35
         }
       ]
     },
@@ -759,13 +755,21 @@ const textNodes =
         }
       ]
     },
-    { // Day 2 Skip Dawg Check
+    { // Day 2 Skip Dawg Check (NO DT)
       id: 49,
-      text: 'You decided to skip doing dawgcheck and you start on the next task of your day',
+      text: 'You decided to skip doing dawgcheck. However, you decide that you want to take a day to yourself.',
       options: [
         {
-          text: 'Do homework',
-          nextText: 35
+          text: 'Go to Iron Horse',
+          nextText: 25
+        },
+        {
+          text: 'Have a zoom movie day',
+          nextText: 95
+        },
+        {
+          text: 'Attend class but on zoom',
+          nextText: 65
         }
       ]
     },
@@ -896,7 +900,7 @@ const textNodes =
       options: [
         {
           text: 'Study',
-          nextText: 57
+          nextText: 103
         },
         {
           text: 'Watch Netflix',
@@ -1333,7 +1337,7 @@ const textNodes =
       options: [
         {
           text: 'Go to sleep',
-          nextText: 87
+          nextText: 105
         }
       ]
     },
@@ -1343,7 +1347,7 @@ const textNodes =
       options: [
         {
           text: 'Go to sleep',
-          nextText: 33
+          nextText: 32
         }
       ]
     },
@@ -1399,7 +1403,7 @@ const textNodes =
         }
       ]
     },
-    { // Zoom movie day
+    { // Zoom movie day 2
       id: 95,
       text: 'You send a text to your friends and ask them if they want to have a zoom movie day',
       options: [
@@ -1520,6 +1524,50 @@ const textNodes =
         {
           text: 'Go to class',
           nextText: 10
+        }
+      ]
+    },
+    { // Study at MLC
+      id: 104,
+      text: 'You spend the majority of the day at MLC and decide that it is time to head home.',
+      options: [
+        {
+          text: 'Head home',
+          nextText: 35
+        }
+      ]
+    },
+    { // DAY 2 DT YES
+      id: 105,
+      text: 'You wake up in the morning on the second day of the week.',
+      options: [
+        {
+          text: 'Do DawgCheck',
+          nextText: 25
+        },
+        {
+          text: 'Skip DawgCheck',
+          nextText: 95
+        },
+      ]
+    },
+    { // DAY 2 DAWGCHECK DT YES
+      id: 106,
+      text: 'You go through DawgCheck and the result says that you are cleared to go to campus. However, you are feeling super groggy and do not feel like heading to campus today.',
+      options: [
+        {
+          text: 'Attend class but on zoom',
+          nextText: 65
+        }
+      ]
+    },
+    { // DAY 2 SKIP DAWGCHECK DT YES
+      id: 107,
+      text: 'You decided to skip doing DawgCheck. However, you are feeling super groggy and do not feel like heading to campus today.',
+      options: [
+        {
+          text: 'Attend class but on zoom',
+          nextText: 65
         }
       ]
     }
