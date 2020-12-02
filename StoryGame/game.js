@@ -222,27 +222,22 @@ const textNodes =
       options: [
         {
           text: 'Extreme difficulty breathing or shortness of breath',
-          setState: { CovidPositive: true },
           nextText: 14
         },
         {
           text: 'Signs of low oxygen',
-          setState: { CovidPositive: true },
           nextText: 14
         },
         {
           text: 'Severe chest pain or discomfort',
-          setState: { CovidPositive: true },
           nextText: 14
         },
         {
           text: 'Signs of low blood pressure',
-          setState: { CovidPositive: true },
           nextText: 14
         },
         {
           text: 'None of the above',
-          setState: { CovidPositive: false },
           nextText: 14
         }
       ]
@@ -267,12 +262,10 @@ const textNodes =
       options: [
         {
           text: 'I have been in close contact',
-          setState: { CovidPositive: true },
           nextText: 15
         },
         {
           text: 'I have not been in close contact',
-          setState: { CovidPositive: false },
           nextText: 15
         }
       ]
@@ -303,7 +296,7 @@ const textNodes =
         },
         {
           text: 'None of the above',
-          setState: { CovidPositive: false },
+          setState: { CovidNegative: true },
           nextText: 19
         }
       ]
@@ -346,11 +339,11 @@ const textNodes =
         {
           text: 'Check results',
           requiredState: (currentState) => currentState.CovidPositive,
-          setState: { CovidPositive: false },
           nextText: 18
         },
         {
           text: 'Check results',
+          requiredState: (currentState) => currentState.CovidNegative,
           nextText: 16
         }
       ]
@@ -704,23 +697,23 @@ const textNodes =
       options: [
         {
           text: 'Nachos',
-          nextText: 35
+          nextText: 49
         },
         {
           text: 'Tacos',
-          nextText: 35
+          nextText: 49
         },
         {
           text: 'Quesidilla',
-          nextText: 35
+          nextText: 49
         },
         {
           text: 'Sandwich',
-          nextText: 35
+          nextText: 49
         }
       ]
     },
-    { // Lunch with Friends (YES, LOOK AROUND)
+    { // Lunch with Friends (YES, ORDER FOOD)
       id: 48,
       text: 'You give the waiter your food order and patiently wait for your food',
       options: [
@@ -730,13 +723,13 @@ const textNodes =
         }
       ]
     },
-    { // Lunch with Friends (YES, LOOK AROUND)
+    { // Lunch with Friends (YES, LEAVE)
       id: 49,
       text: 'You leave the restaurant, what do you do',
       options: [
         {
-          text: 'Enjoy your meal',
-          nextText: 47
+          text: 'Head home',
+          nextText: 35
         }
       ]
     },
