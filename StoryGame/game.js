@@ -327,7 +327,6 @@ const textNodes =
       options: [
         {
           text: 'Head to the University Health Center',
-          setState: { CovidPositive: true },
           nextText: 50
         }
       ]
@@ -422,7 +421,7 @@ const textNodes =
         },
       ]
     },
-    { // Check social media (herty field)
+    { // 
       id: 25,
       text: 'You send a text to your friends and ask them if they want to go hang out 6 feet apart at Iron Horse.',
       options: [
@@ -512,7 +511,6 @@ const textNodes =
       options: [
         {
           text: 'Go get tested',
-          setState: { CovidPositive: true },
           nextText: 50
         },
         {
@@ -575,7 +573,7 @@ const textNodes =
     },
     { // Ending the second day
       id: 36,
-      text: 'You had a long second day of school. You start preparing for bed and getting ready for tomorrow',
+      text: 'You had a long second day so you start preparing for bed and getting ready for tomorrow',
       options: [
         {
           text: 'Go to sleep',
@@ -639,7 +637,7 @@ const textNodes =
       options: [
         {
           text: 'Finish testing and leave',
-          nextText: 35
+          nextText: 111
         }
       ]
     },
@@ -766,10 +764,6 @@ const textNodes =
         {
           text: 'Have a zoom movie day',
           nextText: 95
-        },
-        {
-          text: 'Attend class but on zoom',
-          nextText: 65
         }
       ]
     },
@@ -779,7 +773,7 @@ const textNodes =
       options: [
         {
           text: 'Head home',
-          nextText: 84
+          nextText: 112
         }
       ]
     },
@@ -789,12 +783,6 @@ const textNodes =
       options: [
         {
           text: 'Check results',
-          nextText: 52
-        },
-        {
-          text: 'Check results',
-          requiredState: (currentState) => currentState.CovidPositive,
-          setState: { CovidPositive: false },
           nextText: 53
         }
       ]
@@ -820,7 +808,7 @@ const textNodes =
       options: [
         {
           text: 'Head home',
-          nextText: 3
+          nextText: 37
         }
       ]
     },
@@ -896,7 +884,7 @@ const textNodes =
     },
     { // MLC STUDY ROOM (STUDY ROOM)
       id: 59,
-      text: 'You look around and find an availiable study room to settle down at',
+      text: 'You look around and find an avaliable study room to settle down at',
       options: [
         {
           text: 'Study',
@@ -1052,11 +1040,11 @@ const textNodes =
       options: [
         {
           text: 'Check the calendar',
-          nextText: 59
+          nextText: 70
         },
         {
           text: 'Check Healthy Dawgs',
-          nextText: 60
+          nextText: 71
         }
       ]
     },
@@ -1191,7 +1179,7 @@ const textNodes =
         }
       ]
     },
-    { // How to Stay Healthy
+    { // 
       id: 76,
       text: 'You decide to skip your class and head to Tate',
       options: [
@@ -1357,18 +1345,16 @@ const textNodes =
       options: [
         {
           text: 'Go get tested',
-          setState: { CovidPositive: true },
           nextText: 50
         }
       ]
     },
     { // Positive
       id: 91,
-      text: 'A few days pass and your symptoms do not appear to be fading. You check your email and see that the University of Georgia Health center has sent you something.',
+      text: 'Your symptoms do not appear to be fading. You check your email and see that the University of Georgia Health center has sent you something.',
       options: [
         {
           text: 'Check email',
-          setState: { CovidPositive: true },
           nextText: 51
         }
       ]
@@ -1431,7 +1417,7 @@ const textNodes =
       options: [
         {
           text: 'Watch the movie',
-          nextText: 101
+          nextText: 109
         },
         {
           text: 'Choose another movie',
@@ -1445,7 +1431,7 @@ const textNodes =
       options: [
         {
           text: 'Watch the movie',
-          nextText: 101
+          nextText: 109
         },
         {
           text: 'Choose another movie',
@@ -1459,7 +1445,7 @@ const textNodes =
       options: [
         {
           text: 'Watch the movie',
-          nextText: 101
+          nextText: 109
         },
         {
           text: 'Choose another movie',
@@ -1473,7 +1459,7 @@ const textNodes =
       options: [
         {
           text: 'Watch the movie',
-          nextText: 101
+          nextText: 109
         },
         {
           text: 'Choose another movie',
@@ -1503,16 +1489,26 @@ const textNodes =
         }
       ]
     },
-    { // Iron Horse arrival
-      id: 102,
-      text: 'You and your friends arrive at iron horse and it is empty. You find a place to settle down.',
+    { // Iron Horse activity
+      id: 101,
+      text: 'You and your friends spend the majority of the day at Iron Horse. It was a nice experience that made it seem like everything was back to normal again. It is getting late so you guys decide to head home.',
       options: [
         {
-          text: 'Watch the movie',
+          text: 'Head home',
+          nextText: 36
+        }
+      ]
+    },
+    { // Iron Horse arrival
+      id: 102,
+      text: 'You and your friends arrive at Iron Horse and it is empty. You find a place to settle down.',
+      options: [
+        {
+          text: 'Take pictures on the horse',
           nextText: 101
         },
         {
-          text: 'Choose another movie',
+          text: 'Have a picnic',
           nextText: 100
         }
       ]
@@ -1543,11 +1539,11 @@ const textNodes =
       options: [
         {
           text: 'Do DawgCheck',
-          nextText: 25
+          nextText: 106
         },
         {
           text: 'Skip DawgCheck',
-          nextText: 95
+          nextText: 107
         },
       ]
     },
@@ -1571,13 +1567,69 @@ const textNodes =
         }
       ]
     },
-    { // DAY 2 SKIP DAWGCHECK DT YES
+    { // 
       id: 108,
       text: 'You spend the majority of the day at MLC watching Netflix and decide that it is time to head home.',
       options: [
         {
           text: 'Head home',
           nextText: 35
+        }
+      ]
+    },
+    { // Watch the movie
+      id: 109,
+      text: 'Time flies by watching movies with your friends on zoom and you end up watching more than the one movie.',
+      options: [
+        {
+          text: 'Do some homework',
+          nextText: 110
+        },
+        {
+          text: 'Head to bed early',
+          nextText: 33
+        }
+      ]
+    },
+    { // do some hw zoom movie
+      id: 110,
+      text: 'You decide that it is still early so you want to get some homework out of the way before you sleep.',
+      options: [
+        {
+          text: 'Stay up doing homework',
+          nextText: 33
+        },
+        {
+          text: 'Head to bed',
+          nextText: 33
+        }
+      ]
+    },
+    { // Ending the second day DT YES
+      id: 111,
+      text: 'You had a long second day so you start preparing for bed and getting ready for tomorrow',
+      options: [
+        {
+          text: 'Go to sleep',
+          nextText: 87
+        },
+        {
+          text: 'Stay up and watch Netflix',
+          nextText: 87
+        }
+      ]
+    },
+    { // Head home after testing
+      id: 112,
+      text: 'You head home after getting tested. You have a lot of homework that you pushed off so you decide to start on that.',
+      options: [
+        {
+          text: 'Do homework',
+          nextText: 91
+        },
+        {
+          text: 'Eat something',
+          nextText: 91
         }
       ]
     }
