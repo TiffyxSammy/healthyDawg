@@ -507,7 +507,7 @@ const textNodes =
     },
     { // Going DT (YES)
       id: 31,
-      text: 'You are feeling unwell and think you might have symptoms of Corona. You think of this because you went downtown with your friends a couple of days ago',
+      text: 'You are feeling unwell and think you might have symptoms of Corona. You think this is because you went downtown with your friends the other day.',
       options: [
         {
           text: 'Go get tested',
