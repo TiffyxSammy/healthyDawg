@@ -1,0 +1,2 @@
+# Healthy Dawgs
+Healthy Dawgs, a COVID-19 Pandemic Awareness Website, we built from scratch to serve and keep safe members of the UGA community. Healthy Dawgs is composed of multiple interactive and informational links. Users can receive information on social distancing activities, track current cases, connect to healthy habits videos, and learn more about COVID-19 through online interactive activities and games that we created. 
